@@ -12,6 +12,8 @@ urlpatterns = [
     path('users/register/', views.registerUser, name='register'),
     path('products/', views.getProducts, name="products"),
     path('products/<str:pk>', views.getProduct, name="products"),
+    path('shipping/', views.create_shipping_address, name="ship"),
+    
 ]
 
 if settings.DEBUG:
@@ -19,3 +21,6 @@ if settings.DEBUG:
                                         document_root=settings.STATIC_ROOT)
     urlpatterns = urlpatterns + static(settings.MEDIA_URL, 
                                        document_root=settings.MEDIA_ROOT)
+    
+
+    # create_shipping_address

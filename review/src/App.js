@@ -9,24 +9,23 @@ import Productscreen from "./Screens/Productscreen";
 import LoginScreen from "./Screens/LoginScreen";
 import RegisterScreen from "./Screens/RegisterScreen";
 import CartScreen from "./Screens/CartScreen";
-
-// need mag kakasunod amp
+import ShippingScreen from "./Screens/Shipping";
 
 function App() {
   return (
     <Router>
       <Header />
-        <Container>
-          <Routes>
-            <Route path='/login' element={<LoginScreen />} />
-            <Route path= '/cart' element={<CartScreen/>}/>
-            <Route path='/register' element={<RegisterScreen />} />
-            <Route path = "/" element={<Homescreen />} exact />
-            <Route path = "/product/:id" element= {<Productscreen />} />
-
-          </Routes>
-        </Container>
-      <Footer/>
+      <Container>
+        <Routes>
+          <Route path='/' element={<Homescreen />} exact />
+          <Route path='/product/:id' element={<Productscreen />} />
+          <Route path='/login' element={<LoginScreen />} />
+          <Route path='/register' element={<RegisterScreen />} />
+          <Route path='/cart' element={<CartScreen />} />
+          <Route path='/shipping' element={<ShippingScreen />} />
+        </Routes>
+      </Container>
+      <Footer />
     </Router>
   );
 }

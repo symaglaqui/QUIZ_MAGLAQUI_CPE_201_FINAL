@@ -7,6 +7,11 @@ from .models import *
 # By using the ProductSerializer, you don't need to manually convert each field of your Product model into a format suitable for the API response
 # no need na nung "asd" : "asasd"
 
+class ShippingAddressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ShippingAddress
+        fields = '__all__'
+
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
